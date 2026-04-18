@@ -1,0 +1,277 @@
+.section {
+  padding: 100px 0;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(27,58,107,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.pill {
+  display: inline-block;
+  background: var(--primary-pale);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(27,58,107,0.15);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.title span {
+  color: var(--primary);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: start;
+}
+
+.main {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: 80px;
+  color: var(--primary-pale);
+  line-height: 0.8;
+  margin-bottom: 24px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: 20px;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.authorAvatar {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.authorName {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 16px;
+}
+
+.authorRole {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.stars {
+  margin-left: auto;
+  font-size: 20px;
+  letter-spacing: -2px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background: var(--border);
+  transition: all var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.dotActive {
+  background: var(--primary);
+  width: 24px;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.thumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: white;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: left;
+  font-family: var(--font-body);
+  width: 100%;
+}
+
+.thumb:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.thumbActive {
+  border-color: var(--primary) !important;
+  background: var(--primary-pale) !important;
+}
+
+.thumbEmoji {
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  background: var(--surface);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.thumbName {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+.thumbRole {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.cta {
+  background: var(--primary);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.cta p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: white;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: all var(--transition);
+  font-family: var(--font-body);
+}
+
+.ctaBtn:hover {
+  background: var(--dark);
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 32px 24px;
+  }
+
+  .text {
+    font-size: 17px;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .thumb {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .cta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .stars {
+    display: none;
+  }
+}
+.authorAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.thumbAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
