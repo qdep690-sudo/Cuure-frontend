@@ -234,8 +234,15 @@
     display: none;
   }
 }
+
 .logoImg {
   height: 75px;
   object-fit: contain;
   margin: 10px 0; /* top and bottom space */
+}
+@media (max-width: 900px) {
+  .logoImg {
+    margin: 4px 0;   /* reduce space for mobile */
+    height: 60px;    /* optional: slightly smaller logo */
+  }
 }
