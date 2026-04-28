@@ -19,7 +19,7 @@ export default function Footer() {
   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 >
   <img
-    src="/images/logo/image.png"
+    src="/images/logo/logo.svg"
     alt="cuure.health"
     className={styles.logoImg}
   />
