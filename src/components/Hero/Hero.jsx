@@ -4,9 +4,9 @@ import styles from "./Hero.module.css";
 import { useState, useEffect } from "react";
 
 const avatars = [
-  "/images/testimonials/anjali.png",
-  "/images/testimonials/rajan.png",
-  "/images/testimonials/sunita.png",
+  "/images/testimonials/anjali.webp",
+  "/images/testimonials/rajan.webp",
+  "/images/testimonials/sunita.webp",
 ];
 
 /* Rotating Heading Component */
