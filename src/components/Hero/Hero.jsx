@@ -135,7 +135,14 @@ export default function Hero() {
 
             <div className={styles.imagePlaceholder}>
               <div className={styles.doctorGraphic}>
-                <img src="/images/hero/doctor.webp" className={styles.doctorImg} alt="Doctor" />
+                <img
+  src="/images/hero/doctor.webp"
+  className={styles.doctorImg}
+  alt="Doctor"
+  loading="eager"
+  fetchPriority="high"
+  decoding="async"
+/>
               </div>
             </div>
 
