@@ -28,7 +28,11 @@ export default function Plans() {
 
             <div className={styles["plan-card"]}>
               <h3>Basic Plan</h3>
-              <h2>₹199<span>/month</span></h2>
+              <h2 className={styles["plan-price"]}>
+               <span className={styles["old-price"]}>₹499</span>
+               <span className={styles["new-price"]}>₹199</span>
+               <span>/month</span>
+                 </h2>
               <ul>
                 <li>1 Doctor Consultation / Month</li>
                 <li>Basic Health Monitoring</li>

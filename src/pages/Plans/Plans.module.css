@@ -117,3 +117,38 @@
 .featured {
   border: 2px solid #1f3c88;
 }
+/* Pricing */
+
+.plan-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.old-price {
+  font-size: 22px;
+  color: #9ca3af;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.new-price {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0d2346;
+}
+
+.plan-price span:last-child {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.offer {
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
