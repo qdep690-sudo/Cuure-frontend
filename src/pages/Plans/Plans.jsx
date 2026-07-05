@@ -34,18 +34,18 @@ export default function Plans() {
                <span>/month</span>
                  </h2>
               <ul>
-                <li>1 Doctor Consultation / Month</li>
+                <li>1 Doctor Consultation at home</li>
                 <li>Basic Health Monitoring</li>
-                <li>Email Support</li>
+                {/* <li>Email Support</li> */}
               </ul>
               <button className={styles["plan-btn"]}>Choose Plan</button>
             </div>
 
             <div className={`${styles["plan-card"]} ${styles.featured}`}>
               <h3>Pro Plan</h3>
-              <h2>₹399<span>/month</span></h2>
+              <h2>₹699<span>/month</span></h2>
               <ul>
-                <li>Unlimited Doctor Consultations</li>
+                <li>3 Doctor Consultations / Month</li>
                 <li>Health Reports Tracking</li>
                 <li>Priority Support</li>
                 <li>Video Consultations</li>
@@ -55,9 +55,9 @@ export default function Plans() {
 
             <div className={styles["plan-card"]}>
               <h3>Family Plan</h3>
-              <h2>₹799<span>/month</span></h2>
+              <h2>₹999<span>/month</span></h2>
               <ul>
-                <li>Up to 5 Family Members</li>
+                <li>Up to 4 Family Members</li>
                 <li>Unlimited Consultations</li>
                 <li>24/7 Emergency Support</li>
                 <li>Health Checkup Discounts</li>
