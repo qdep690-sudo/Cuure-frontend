@@ -5,11 +5,11 @@ export default function Blog() {
   const navigate = useNavigate();
 
   const posts = [
-    { title: "5 Signs You Should See a Cardiologist",                     slug: "cardiologist-signs",    image: "/images/BlogImages/Blog1.jpg" },
-    { title: "Understanding Your Lung Health: A Guide",                 slug: "lung-health",           image: "/images/BlogImages/Blog2.jpg" },
-    { title: "How Virtual Consultations Are Changing Healthcare",       slug: "virtual-consultations", image: "/images/BlogImages/Blog3.jpg" },
-    { title: "Nutrition Tips for Better Gut Health",                 slug: "nutrition-gut-health",  image: "/images/BlogImages/Blog4.jpg" },
-    { title: "Cancer Awareness & Prevention: What Everyone Should Know",  slug: "cancer-awareness",      image: "/images/BlogImages/Blog5.jpg" },
+    { title: " 5 Warning Signs You Should See a Cardiologist",                     slug: "cardiologist-signs",    image: "/images/BlogImages/Blog1.jpg" },
+    { title: "How to Improve Lung Health: Symptoms, Causes & Prevention",                 slug: "lung-health",           image: "/images/BlogImages/Blog2.jpg" },
+    { title: "Virtual Doctor Consultations: Benefits, Process & When to Use Them",       slug: "virtual-consultations", image: "/images/BlogImages/Blog3.jpg" },
+    { title: "How to Improve Gut Health Naturally: Diet, Symptoms & Tips",                 slug: "nutrition-gut-health",  image: "/images/BlogImages/Blog4.jpg" },
+    { title: "Cancer Prevention: Symptoms, Risk Factors & Early Detection",  slug: "cancer-awareness",      image: "/images/BlogImages/Blog5.jpg" },
   ];
 
   return (

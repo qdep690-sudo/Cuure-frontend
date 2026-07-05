@@ -38,19 +38,19 @@ html, body, #root {
 
 /* BACKGROUND */
 .appt-body {
-  position: relative;
+  /* position: relative;
   background: url('https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1400&q=80')
-    center/cover no-repeat;
+    center/cover no-repeat; */
   padding: 80px 20px;
 }
 
 /* overlay */
-.appt-body::before {
+/* .appt-body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10,22,40,0.6);
-}
+  background: rgba(228, 235, 246, 0.6);
+} */
 
 /* CONTAINER */
 .appt-container {
@@ -148,7 +148,7 @@ html, body, #root {
   padding: 16px;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(135deg,#1a4fa0,#4b9fe4);
+  background: #1B3A6B;
   color: white;
   font-size: 16px;
   font-weight: 600;
