@@ -10,6 +10,11 @@ export default function Blog() {
     { title: "Virtual Doctor Consultations: Benefits, Process & When to Use Them",       slug: "virtual-consultations", image: "/images/BlogImages/Blog3.jpg" },
     { title: "How to Improve Gut Health Naturally: Diet, Symptoms & Tips",                 slug: "nutrition-gut-health",  image: "/images/BlogImages/Blog4.jpg" },
     { title: "Cancer Prevention: Symptoms, Risk Factors & Early Detection",  slug: "cancer-awareness",      image: "/images/BlogImages/Blog5.jpg" },
+    { title: "High Blood Pressure: Symptoms, Causes & Prevention", slug: "high-blood-pressure", image: "/images/BlogImages/Blog6.jpg" },
+  { title: "Diabetes: Symptoms, Causes & Blood Sugar Management", slug: "diabetes-management", image: "/images/BlogImages/Blog7.jpg" },
+  { title: "Mental Health: Signs, Symptoms & When to Seek Help", slug: "mental-health", image: "/images/BlogImages/Blog8.jpg" },
+  { title: "Women's Health: Essential Screenings & Preventive Care", slug: "womens-health", image: "/images/BlogImages/Blog9.jpg" },
+  { title: "Joint Pain: Causes, Prevention & When to See an Orthopedic Doctor", slug: "joint-pain", image: "/images/BlogImages/Blog10.jpg" },
   ];
 
   return (

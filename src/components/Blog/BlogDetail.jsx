@@ -249,7 +249,7 @@ readTime: "7 min read",
 author: "Cuure Health Medical Team",
 published: "July 5, 2026",
 updated: "July 5, 2026",
-readTime: "8 min read",
+readTime: "8 min read",  
     description: (
       <>
         <SplitSection img={IMG.cancerAwareness} alt="Cancer awareness campaign promoting early detection and prevention" title="What Is Cancer and How Does It Develop?">

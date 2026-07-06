@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./BookingForm.css";
 
-const API = "https://cuure-backend-production.up.railway.app";
+const API = "https://cuure-backend-production-bba5.up.railway.app";
 
 export default function Booking() {
   const [form, setForm] = useState({
