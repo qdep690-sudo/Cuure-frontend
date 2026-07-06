@@ -5,45 +5,49 @@ import "./BookingForm.css";
 const API = "https://cuure-backend-production-bba5.up.railway.app";
 
 export default function Booking() {
-  const [form, setForm] = useState({
-    patient_name: "",
-    dob: "",
-    age: "",
-    email: "",
-    phone: "",
-    gender: "",
-    address: "",
-  });
+ const [form, setForm] = useState({
+  patient_name: "",
+  email: "",
+  phone: "",
+  gender: "",
+  address: "",
+});
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
 
-  const calculateAge = (dob) => {
-    const birthDate = new Date(dob);
-    const today = new Date();
+  // const calculateAge = (dob) => {
+  //   const birthDate = new Date(dob);
+  //   const today = new Date();
 
-    let years = today.getFullYear() - birthDate.getFullYear();
-    let months = today.getMonth() - birthDate.getMonth();
+  //   let years = today.getFullYear() - birthDate.getFullYear();
+  //   let months = today.getMonth() - birthDate.getMonth();
 
-    if (months < 0) {
-      years--;
-      months += 12;
-    }
+  //   if (months < 0) {
+  //     years--;
+  //     months += 12;
+  //   }
 
-    return `${years}Y ${months}M`;
-  };
+  //   return `${years}Y ${months}M`;
+  // };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+ const handleChange = (e) => {
+  const { name, value } = e.target;
 
-    if (name === "dob") {
-      const age = calculateAge(value);
-      setForm({ ...form, dob: value, age });
-    } else {
-      setForm({ ...form, [name]: value });
-    }
-  };
+  setForm((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
+  //   if (name === "dob") {
+  //     const age = calculateAge(value);
+  //     setForm({ ...form, dob: value, age });
+  //   } else {
+  //     setForm({ ...form, [name]: value });
+  //   }
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,14 +67,13 @@ export default function Booking() {
 
     try {
       // ✅ BOOK APPOINTMENT
-      await axios.post(`${API}/api/book-appointment`, {
-        patient_name: form.patient_name,
-        age: form.age,
-        email: form.email || null,
-        phone: form.phone,
-        gender: form.gender,
-        address: form.address,
-      });
+  await axios.post(`${API}/api/book-appointment`, {
+  patient_name: form.patient_name,
+  email: form.email || null,
+  phone: form.phone,
+  gender: form.gender,
+  address: form.address || null,
+});
 
       // ✅ INSTANT SUCCESS (no delay)
       setSuccess(true);
@@ -87,14 +90,12 @@ export default function Booking() {
       localStorage.setItem("cuure_user", JSON.stringify(savedData));
 
       setForm({
-        patient_name: "",
-        dob: "",
-        age: "",
-        email: "",
-        phone: "",
-        gender: "",
-        address: "",
-      });
+  patient_name: "",
+  email: "",
+  phone: "",
+  gender: "",
+  address: "",
+});
 
     } catch (err) {
       setLoading(false);
@@ -196,7 +197,7 @@ export default function Booking() {
                   </select>
                 </div>
 
-                <input type="hidden" value={form.age} />
+                {/* <input type="hidden" value={form.age} /> */}
 
 
                 <div className="appt-field full">
