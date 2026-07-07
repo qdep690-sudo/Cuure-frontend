@@ -35,6 +35,42 @@ const IMG = {
   noSmoking:       'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800&auto=format&fit=crop',
   cancerDiet:      'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&auto=format&fit=crop',
   screening:       'https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&auto=format&fit=crop',
+
+  // ── High Blood Pressure ─────────────────────────────────────────────────────
+bpOverview:   'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=800&auto=format&fit=crop',
+bpSymptoms:   'https://images.unsplash.com/photo-1541199249251-f713e6145474?w=800&auto=format&fit=crop',
+bpCauses:     'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&auto=format&fit=crop',
+bpDiet:       'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&auto=format&fit=crop',
+bpScreening:  'https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&auto=format&fit=crop',
+
+// ── Diabetes ─────────────────────────────────────────────────────────────────
+diabetesOverview:  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop',
+diabetesSymptoms:  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop',
+diabetesCauses:    'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&auto=format&fit=crop',
+diabetesDiet:      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&auto=format&fit=crop',
+diabetesScreening: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=800&auto=format&fit=crop', 
+
+// ── Mental Health ───────────────────────────────────────────────────────────
+mentalOverview:  'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&auto=format&fit=crop',
+mentalSymptoms:  'https://images.unsplash.com/photo-1541199249251-f713e6145474?w=800&auto=format&fit=crop',
+mentalCauses:    'https://images.unsplash.com/photo-1489533119213-66a5cd877091?w=800&auto=format&fit=crop',
+mentalCoping:    'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop',
+mentalHelp:      'https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=800&auto=format&fit=crop',
+
+// ── Women's Health ──────────────────────────────────────────────────────────
+womensOverview:  'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop',
+womensSymptoms:  'https://images.unsplash.com/photo-1550831107-1553da8c8464?w=800&auto=format&fit=crop',
+womensScreenings:'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&auto=format&fit=crop',
+womensLifestyle: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop',
+womensCare:      'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&auto=format&fit=crop',
+
+// ── Joint Pain / Orthopedic ─────────────────────────────────────────────────
+jointOverview:   'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop',
+jointSymptoms:   'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop',
+jointCauses:     'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&auto=format&fit=crop',
+jointCare:       'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&auto=format&fit=crop',
+jointDoctor:     'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop',
+
 }
 
 function SplitSection({ img, alt, title, children, reverse = false }) {
@@ -300,7 +336,286 @@ readTime: "8 min read",
       </>
     )
   },
+  // ── 6. HIGH BLOOD PRESSURE ──────────────────────────────────────────────────
+  {
+    slug: "high-blood-pressure",
+    title: "High Blood Pressure: Symptoms, Causes & Prevention",
+    emoji: "🩺",
+    category: "Heart Health",
+    author: "Cuure Health Medical Team",
+    published: "July 7, 2026",
+    updated: "July 7, 2026",
+    readTime: "9 min read",
+    description: (
+      <>
+        <SplitSection img={IMG.bpOverview} alt="Doctor checking a patient's blood pressure with a digital monitor" title="What Is High Blood Pressure?">
+          <p>High blood pressure, also called hypertension, occurs when the force of blood against your artery walls stays consistently too high. It's often called the "silent killer" because it typically causes no symptoms while quietly damaging the heart, kidneys, and blood vessels over time.</p>
+          <p>Blood pressure is recorded as two numbers — systolic (pressure when the heart beats) over diastolic (pressure when the heart rests). A reading below 120/80 mmHg is considered normal, while readings of 130/80 mmHg or higher fall into the hypertension range. Because most people feel completely fine even with elevated numbers, regular screening is the only reliable way to catch it early.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.bpSymptoms} alt="Person experiencing dizziness and headache from high blood pressure" reverse title="Common Symptoms of High Blood Pressure">
+          <p>Hypertension often develops silently, but in more advanced cases, some people do notice warning signs. Seek medical evaluation if you experience:</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Severe Headaches:</strong> Recurring or unusually intense headaches can signal significantly elevated blood pressure.</li>
+            <li><strong>Dizziness or Blurred Vision:</strong> High pressure can affect blood flow to the brain and eyes, causing lightheadedness or visual disturbances.</li>
+            <li><strong>Chest Pain or Shortness of Breath:</strong> These symptoms may indicate your heart is under significant strain and require prompt evaluation.</li>
+            <li><strong>Unexplained Fatigue or Confusion:</strong> Persistent tiredness or difficulty concentrating can be linked to poorly controlled blood pressure.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.bpCauses} alt="Illustration of lifestyle factors that contribute to high blood pressure" title="Causes and Risk Factors">
+          <p>Most cases of high blood pressure, known as primary hypertension, develop gradually from a combination of genetics, aging, and lifestyle factors rather than one single cause. Secondary hypertension, by contrast, appears suddenly due to an underlying condition such as kidney disease or a hormonal disorder.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Excess Salt Intake:</strong> High sodium levels cause the body to retain fluid, raising blood volume and pressure.</li>
+            <li><strong>Obesity and Physical Inactivity:</strong> Extra body weight and a sedentary lifestyle make the heart work harder to circulate blood.</li>
+            <li><strong>Smoking and Alcohol:</strong> Both narrow and stiffen blood vessels, contributing directly to higher blood pressure.</li>
+            <li><strong>Chronic Stress:</strong> Ongoing stress can raise blood pressure over time, especially when combined with poor coping habits.</li>
+            <li><strong>Family History:</strong> A genetic predisposition significantly increases your likelihood of developing hypertension.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.bpDiet} alt="Heart-healthy foods including leafy greens, berries, and nuts that support healthy blood pressure" reverse title="Foods and Habits That Support Healthy Blood Pressure">
+          <p>No single food controls blood pressure, but a consistent, heart-healthy eating pattern makes a measurable difference. Diets rich in potassium, fiber, and healthy fats help relax blood vessels and support fluid balance.</p>
+          <p>Foods with strong evidence for supporting healthy blood pressure include leafy greens, bananas, berries, oats, beans, fatty fish, garlic, nuts, and olive oil. At the same time, limiting high-sodium processed foods, sugary drinks, and excess alcohol is just as important. Regular exercise — at least 150 minutes per week — further supports healthy blood pressure by strengthening the heart and improving circulation.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.bpScreening} alt="Patient having a routine blood pressure screening at a clinic" title="Diagnosis and When to See a Doctor">
+          <p>Because hypertension rarely causes symptoms, diagnosis relies on regular measurement rather than how you feel. Doctors typically confirm a diagnosis using multiple readings over time, and may recommend home monitoring or ambulatory blood pressure monitoring for a more complete picture.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Routine Screening:</strong> Adults should have their blood pressure checked at every regular check-up, regardless of how they feel.</li>
+            <li><strong>Home Monitoring:</strong> Tracking readings at home over several days can reveal patterns a single office visit might miss.</li>
+            <li><strong>Seek Immediate Care:</strong> Sudden severe headache, chest pain, difficulty breathing, or confusion may signal a hypertensive emergency and require immediate medical attention.</li>
+          </ul>
+        </SplitSection>
+      </>
+    )
+  },
+  // ── 7. DIABETES ─────────────────────────────────────────────────────────────
+  {
+    slug: "diabetes-management",
+    title: "Diabetes: Symptoms, Causes & Blood Sugar Management",
+    emoji: "🩸",
+    category: "Diabetes Care",
+    author: "Cuure Health Medical Team",
+    published: "July 7, 2026",
+    updated: "July 7, 2026",
+    readTime: "9 min read",
+    description: (
+      <>
+        <SplitSection img={IMG.diabetesOverview} alt="Person checking blood sugar levels with a glucose monitor" title="What Is Diabetes?">
+          <p>Diabetes is a chronic condition that affects how your body turns food into energy. Normally, the hormone insulin helps move sugar (glucose) from your bloodstream into your cells for fuel. In diabetes, the body either doesn't produce enough insulin or can't use it effectively, causing blood sugar levels to stay too high.</p>
+          <p>There are two main types. Type 1 diabetes is an autoimmune condition where the body stops producing insulin, usually diagnosed in childhood or young adulthood. Type 2 diabetes, the more common form, develops when the body becomes resistant to insulin over time and is closely linked to lifestyle and genetic factors. Prediabetes, where blood sugar is elevated but not yet in the diabetic range, is a critical window where lifestyle changes can often prevent progression entirely.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.diabetesSymptoms} alt="Person experiencing fatigue and excessive thirst, common early signs of diabetes" reverse title="Common Symptoms of Diabetes">
+          <p>Type 2 diabetes often develops gradually, and symptoms can be easy to overlook or mistake for normal fatigue. Pay attention to your body and seek evaluation if you notice:</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Frequent Urination and Excessive Thirst:</strong> High blood sugar pulls fluid from tissues, triggering dehydration and a constant need to drink and urinate.</li>
+            <li><strong>Unexplained Fatigue:</strong> When cells can't access glucose properly for energy, persistent tiredness is a common early sign.</li>
+            <li><strong>Increased Hunger:</strong> Despite eating regularly, cells starved of usable glucose can trigger ongoing hunger.</li>
+            <li><strong>Blurred Vision:</strong> High blood sugar can cause the lens of the eye to swell, temporarily affecting focus.</li>
+            <li><strong>Slow-Healing Wounds or Frequent Infections:</strong> Elevated glucose impairs circulation and immune response, slowing recovery from cuts and infections.</li>
+            <li><strong>Unintended Weight Loss:</strong> More common in type 1 diabetes, this occurs when the body burns fat and muscle for energy it can't get from glucose.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.diabetesCauses} alt="Illustration of lifestyle and genetic factors contributing to type 2 diabetes" title="Causes and Risk Factors">
+          <p>Type 1 diabetes results from the immune system mistakenly attacking insulin-producing cells in the pancreas, and its exact trigger isn't fully understood. Type 2 diabetes, however, develops from a combination of factors that often build up over years.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Excess Body Weight:</strong> Carrying extra weight, particularly around the abdomen, is strongly linked to insulin resistance.</li>
+            <li><strong>Physical Inactivity:</strong> Regular movement helps cells use insulin more efficiently, so a sedentary lifestyle raises risk.</li>
+            <li><strong>Family History and Genetics:</strong> Having a parent or sibling with type 2 diabetes increases your own likelihood of developing it.</li>
+            <li><strong>Age:</strong> Risk rises after age 45, though type 2 diabetes is increasingly diagnosed in younger adults.</li>
+            <li><strong>Prediabetes and Gestational Diabetes History:</strong> Both significantly increase the likelihood of developing type 2 diabetes later in life.</li>
+            <li><strong>Poor Diet:</strong> Diets high in refined carbohydrates and sugary beverages contribute to insulin resistance over time.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.diabetesDiet} alt="Balanced plate of vegetables, whole grains, and lean protein for blood sugar management" reverse title="Foods and Habits That Support Healthy Blood Sugar">
+          <p>Managing blood sugar isn't about eliminating entire food groups — it's about consistency, balance, and portion awareness. Foods that digest slowly help prevent the sharp blood sugar spikes that put strain on the body over time.</p>
+          <p>Non-starchy vegetables, whole grains, legumes, nuts, and lean proteins all help slow glucose absorption and support steadier energy levels throughout the day. Fiber-rich foods like beans, oats, and leafy greens are especially valuable, as they slow digestion and improve insulin sensitivity. On the other hand, sugary drinks, refined white bread and pastries, and heavily processed snacks cause rapid blood sugar spikes and should be limited. Regular physical activity — even a daily 30-minute walk — further improves how effectively your body uses insulin, often producing noticeable benefits within weeks.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.diabetesScreening} alt="Doctor reviewing blood sugar test results with a patient" title="Diagnosis, Monitoring, and When to See a Doctor">
+          <p>Diabetes and prediabetes are typically diagnosed through simple blood tests, including fasting blood glucose, A1C (which reflects average blood sugar over roughly three months), or an oral glucose tolerance test. Because early type 2 diabetes often has mild or no symptoms, routine screening is essential for anyone with risk factors.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Routine Screening:</strong> Adults over 45, or younger adults with risk factors like obesity or a family history, should be screened regularly.</li>
+            <li><strong>Home Monitoring:</strong> For those already diagnosed, regular blood sugar checks help guide daily food, activity, and medication decisions.</li>
+            <li><strong>Seek Prompt Care:</strong> Extreme thirst, rapid breathing, confusion, or fruity-smelling breath can signal a diabetic emergency and require immediate medical attention.</li>
+          </ul>
+        </SplitSection>
+      </>
+    )
+  },
+  // ── 8. MENTAL HEALTH ────────────────────────────────────────────────────────
+  {
+    slug: "mental-health",
+    title: "Mental Health: Signs, Symptoms & When to Seek Help",
+    emoji: "🧠",
+    category: "Mental Health",
+    author: "Cuure Health Medical Team",
+    published: "July 7, 2026",
+    updated: "July 7, 2026",
+    readTime: "8 min read",
+    description: (
+      <>
+        <SplitSection img={IMG.mentalOverview} alt="Person reflecting on their mental wellbeing in a calm setting" title="Why Mental Health Deserves the Same Attention as Physical Health">
+          <p>Mental health affects how you think, feel, and handle daily life — from managing stress and relating to others to making decisions and coping with challenges. Just like physical health, mental health exists on a spectrum and can fluctuate over time due to biology, life circumstances, and environment.</p>
+          <p>Despite growing awareness, many people delay seeking help due to stigma, uncertainty about symptoms, or simply not recognizing that what they're experiencing is treatable. Understanding common warning signs is the first step toward getting timely, effective support.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.mentalSymptoms} alt="Person experiencing signs of stress, anxiety, or low mood" reverse title="Common Signs and Symptoms">
+          <p>Mental health conditions can show up differently in each person, but certain patterns are worth paying attention to. Consider reaching out for support if you notice:</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Persistent Sadness or Low Mood:</strong> Feeling down, empty, or hopeless most days for two weeks or longer can be a sign of depression.</li>
+            <li><strong>Excessive Worry or Fear:</strong> Ongoing anxiety that interferes with daily activities, sleep, or concentration may indicate an anxiety disorder.</li>
+            <li><strong>Withdrawal from Activities or Relationships:</strong> Losing interest in hobbies, work, or socializing that once brought enjoyment is a common early warning sign.</li>
+            <li><strong>Changes in Sleep or Appetite:</strong> Sleeping much more or less than usual, or significant changes in eating patterns, often accompany mental health struggles.</li>
+            <li><strong>Difficulty Concentrating:</strong> Trouble focusing, making decisions, or remembering things can be linked to stress, anxiety, or mood disorders.</li>
+            <li><strong>Irritability or Mood Swings:</strong> Sudden or intense shifts in mood, or feeling easily agitated, can signal underlying emotional distress.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.mentalCauses} alt="Illustration of factors that can contribute to mental health challenges" title="What Contributes to Mental Health Challenges">
+          <p>Mental health conditions rarely stem from a single cause. Instead, they typically develop from a combination of biological, psychological, and environmental factors that vary from person to person.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Genetics and Family History:</strong> A family history of mental health conditions can increase individual risk, though it doesn't guarantee it.</li>
+            <li><strong>Brain Chemistry:</strong> Imbalances in neurotransmitters can affect mood regulation and contribute to conditions like depression and anxiety.</li>
+            <li><strong>Life Stress and Trauma:</strong> Major life changes, grief, financial pressure, or past trauma can trigger or worsen mental health symptoms.</li>
+            <li><strong>Chronic Illness:</strong> Living with a long-term physical health condition is closely linked to higher rates of depression and anxiety.</li>
+            <li><strong>Social Isolation:</strong> Limited social support and loneliness are significant risk factors for declining mental health.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.mentalCoping} alt="Person practicing healthy coping habits like exercise and mindfulness" reverse title="Habits That Support Mental Wellbeing">
+          <p>While professional treatment is essential for many conditions, daily habits can meaningfully support mental health alongside clinical care. Consistency matters more than intensity.</p>
+          <p>Regular physical activity, even a daily walk, has been shown to reduce symptoms of anxiety and depression by boosting endorphins and improving sleep. Maintaining a consistent sleep schedule, staying connected with supportive people, practicing mindfulness or relaxation techniques, and limiting alcohol help stabilize mood over time. Setting realistic goals and breaking tasks into smaller steps can also reduce feelings of overwhelm during difficult periods.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.mentalHelp} alt="Person having a supportive conversation with a mental health professional" title="When and How to Seek Professional Help">
+          <p>Reaching out for support is a sign of strength, not weakness. A mental health professional can help identify what you're experiencing and recommend an appropriate path forward, whether that's therapy, medication, lifestyle changes, or a combination.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Talk to a Professional:</strong> If symptoms persist for more than two weeks or interfere with daily life, consider consulting a therapist, counselor, or psychiatrist.</li>
+            <li><strong>Primary Care Can Help Too:</strong> A general doctor can screen for common conditions and refer you to specialized mental health care if needed.</li>
+            <li><strong>Seek Immediate Help:</strong> If you or someone you know is having thoughts of self-harm or suicide, contact a crisis helpline or emergency services immediately — this is a medical emergency.</li>
+          </ul>
+        </SplitSection>
+      </>
+    )
+  },
+  // ── 9. WOMEN'S HEALTH ───────────────────────────────────────────────────────
+  {
+    slug: "womens-health",
+    title: "Women's Health: Essential Screenings & Preventive Care",
+    emoji: "🌸",
+    category: "Women's Health",
+    author: "Cuure Health Medical Team",
+    published: "July 7, 2026",
+    updated: "July 7, 2026",
+    readTime: "8 min read",
+    description: (
+      <>
+        <SplitSection img={IMG.womensOverview} alt="Woman consulting with her doctor about preventive health care" title="Why Preventive Care Matters for Women">
+          <p>Women's health needs shift across every life stage — from adolescence and reproductive years through pregnancy, perimenopause, and beyond. Preventive care, including regular screenings and open conversations with a healthcare provider, plays a central role in catching conditions early, when they're most treatable.</p>
+          <p>Many conditions that disproportionately affect women — including certain cancers, thyroid disorders, and osteoporosis — develop gradually and produce few symptoms in early stages. Routine screening, rather than waiting for symptoms to appear, is the most reliable way to protect long-term health.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.womensSymptoms} alt="Woman experiencing symptoms that may warrant a medical evaluation" reverse title="Symptoms That Shouldn't Be Ignored">
+          <p>While occasional discomfort is common, certain symptoms warrant a conversation with your doctor rather than being dismissed as routine:</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Irregular or Heavy Menstrual Bleeding:</strong> Significant changes in cycle length, flow, or bleeding between periods can indicate hormonal imbalance or other underlying conditions.</li>
+            <li><strong>Persistent Pelvic Pain:</strong> Ongoing pain in the pelvic region, especially outside of menstruation, deserves medical evaluation.</li>
+            <li><strong>Unusual Breast Changes:</strong> New lumps, dimpling, nipple discharge, or changes in breast shape should be assessed promptly, even if painless.</li>
+            <li><strong>Persistent Fatigue:</strong> Ongoing tiredness unrelated to sleep or activity levels can be linked to thyroid disorders, anemia, or other conditions more common in women.</li>
+            <li><strong>Mood Changes Around Hormonal Shifts:</strong> Severe mood symptoms tied to the menstrual cycle, pregnancy, or menopause may benefit from medical support rather than being dismissed as normal.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.womensScreenings} alt="Woman undergoing a routine health screening at a clinic" title="Essential Screenings by Life Stage">
+          <p>Recommended screenings evolve as you age. Discuss the right schedule for your individual risk factors with your doctor, but general guidelines include:</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Cervical Cancer Screening:</strong> Pap smear every 3 years starting at age 21, with HPV co-testing typically added from age 30.</li>
+            <li><strong>Breast Cancer Screening:</strong> Mammograms are generally recommended every 1–2 years starting between ages 40–45, or earlier with family history.</li>
+            <li><strong>Bone Density Testing:</strong> Recommended around menopause or age 65 to screen for osteoporosis, which affects women at higher rates than men.</li>
+            <li><strong>Thyroid Function Tests:</strong> Worth discussing if you experience unexplained fatigue, weight changes, or mood shifts, as thyroid disorders are significantly more common in women.</li>
+            <li><strong>Blood Pressure and Cholesterol Checks:</strong> Cardiovascular disease is often underdiagnosed in women, making routine checks especially important.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.womensLifestyle} alt="Woman engaging in healthy lifestyle habits like exercise and balanced nutrition" reverse title="Lifestyle Habits That Support Long-Term Health">
+          <p>Daily habits play a meaningful role in supporting hormonal balance, bone health, and overall wellbeing across every life stage.</p>
+          <p>Adequate calcium and vitamin D intake supports bone density, particularly important during and after menopause when bone loss accelerates. Regular weight-bearing exercise strengthens bones and supports cardiovascular health, while a diet rich in iron helps prevent anemia, which disproportionately affects women of reproductive age. Managing stress and prioritizing sleep also help regulate hormones that influence mood, metabolism, and menstrual health.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.womensCare} alt="Woman having a supportive consultation with her healthcare provider" title="When to See a Doctor">
+          <p>Building a relationship with a trusted healthcare provider — whether a primary care doctor, gynecologist, or both — makes it easier to raise concerns early rather than waiting until symptoms become severe.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Annual Wellness Visits:</strong> Even without symptoms, yearly check-ups allow for screening, vaccination updates, and early detection of emerging issues.</li>
+            <li><strong>Pregnancy Planning:</strong> Preconception counseling can help identify and manage health factors before pregnancy for the best possible outcomes.</li>
+            <li><strong>Seek Prompt Care:</strong> Sudden severe pelvic pain, heavy bleeding, or symptoms of a possible ectopic pregnancy require immediate medical attention.</li>
+          </ul>
+        </SplitSection>
+      </>
+    )
+  },
+  // ── 10. JOINT PAIN ──────────────────────────────────────────────────────────
+  {
+    slug: "joint-pain",
+    title: "Joint Pain: Causes, Prevention & When to See an Orthopedic Doctor",
+    emoji: "🦴",
+    category: "Orthopedic Health",
+    author: "Cuure Health Medical Team",
+    published: "July 7, 2026",
+    updated: "July 7, 2026",
+    readTime: "8 min read",
+    description: (
+      <>
+        <SplitSection img={IMG.jointOverview} alt="Person experiencing joint discomfort in the knee" title="Understanding Joint Pain">
+          <p>Joint pain is one of the most common reasons people seek medical care, affecting the knees, hips, shoulders, hands, and spine. It can range from mild stiffness after activity to persistent pain that limits daily movement and quality of life.</p>
+          <p>Joint pain can be acute, resulting from an injury or short-term inflammation, or chronic, developing gradually from wear and tear, autoimmune conditions, or long-term overuse. Understanding the underlying cause is essential, since treatment differs significantly depending on whether pain stems from mechanical wear, inflammation, or injury.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.jointSymptoms} alt="Person holding their knee due to joint pain and stiffness" reverse title="Common Symptoms to Watch For">
+          <p>Joint pain can present differently depending on its cause. Pay attention to these patterns and seek evaluation if they persist:</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Stiffness, Especially in the Morning:</strong> Joint stiffness that improves with movement but returns after rest can indicate osteoarthritis or an inflammatory condition.</li>
+            <li><strong>Swelling and Warmth:</strong> Visible swelling, redness, or warmth around a joint often signals inflammation and should be evaluated.</li>
+            <li><strong>Reduced Range of Motion:</strong> Difficulty fully bending, straightening, or rotating a joint can indicate cartilage damage or structural changes.</li>
+            <li><strong>Clicking, Grinding, or Popping:</strong> Sounds or sensations during movement, especially with pain, may point to cartilage wear.</li>
+            <li><strong>Pain That Worsens with Activity or Rest:</strong> Mechanical pain typically worsens with use, while inflammatory pain often worsens after periods of rest.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.jointCauses} alt="Illustration of common causes of joint pain including arthritis and injury" title="Common Causes of Joint Pain">
+          <p>Joint pain can stem from a wide range of conditions, and identifying the underlying cause guides the most effective treatment approach.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Osteoarthritis:</strong> The most common form of arthritis, caused by gradual breakdown of cartilage that cushions the joints, typically worsening with age.</li>
+            <li><strong>Rheumatoid Arthritis:</strong> An autoimmune condition where the immune system attacks joint tissue, causing inflammation, swelling, and pain, often symmetrically.</li>
+            <li><strong>Injuries:</strong> Sprains, strains, ligament tears, and fractures can cause both acute and long-term joint pain if not properly treated.</li>
+            <li><strong>Excess Body Weight:</strong> Extra weight places additional mechanical stress on weight-bearing joints like the knees and hips, accelerating wear.</li>
+            <li><strong>Overuse:</strong> Repetitive motion from certain jobs, sports, or activities can gradually damage joint structures over time.</li>
+            <li><strong>Gout:</strong> A buildup of uric acid crystals in a joint, often the big toe, causing sudden, severe pain, swelling, and redness.</li>
+          </ul>
+        </SplitSection>
+
+        <SplitSection img={IMG.jointCare} alt="Person doing gentle stretching exercises to support joint health" reverse title="Protecting Your Joints">
+          <p>While not all joint conditions can be prevented, several habits can reduce strain and slow progression of existing damage.</p>
+          <p>Maintaining a healthy weight significantly reduces load on weight-bearing joints, while regular low-impact exercise like swimming, cycling, or walking strengthens the muscles that support and stabilize joints. Stretching and mobility work help preserve range of motion, and strength training around major joints, particularly the knees and hips, provides added protection. Proper footwear, good posture, and using correct form during exercise or manual work also help reduce unnecessary joint stress.</p>
+        </SplitSection>
+
+        <SplitSection img={IMG.jointDoctor} alt="Orthopedic doctor examining a patient's joint mobility" title="When to See an Orthopedic Doctor">
+          <p>Occasional joint soreness after activity is normal, but certain signs indicate it's time for a professional evaluation rather than waiting for symptoms to resolve on their own.</p>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '10px', lineHeight: 2.1 }}>
+            <li><strong>Persistent or Worsening Pain:</strong> Pain lasting more than a few weeks, or steadily getting worse, warrants an orthopedic evaluation.</li>
+            <li><strong>Joint Instability:</strong> A joint that feels like it's giving way, locking, or catching may indicate structural damage requiring imaging and treatment.</li>
+            <li><strong>Seek Prompt Care:</strong> Sudden severe pain, inability to bear weight, visible deformity, or significant swelling after an injury requires urgent medical attention.</li>
+          </ul>
+        </SplitSection>
+      </>
+    )
+  },
 ]
+
 
 export { blogs }
 

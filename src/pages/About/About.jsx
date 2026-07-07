@@ -64,7 +64,7 @@ function About() {
           <div className="about-image">
             <img
               className={`img-main ${show ? "show" : ""}`}
-              src="/images/About/about1.jpg"
+              src="/images/About/about1.png"
               alt="Doctor"
               onLoad={() => setShow(true)}
             />
@@ -76,7 +76,7 @@ function About() {
           <div className="about-image">
             <img
               className={`img-main ${show ? "show" : ""}`}
-              src="/images/About/about2.jpg"
+              src="/images/About/about2.png"
               alt="Doctor"
               onLoad={() => setShow(true)}
               style={{ objectPosition: 'top' }}
@@ -121,7 +121,7 @@ function About() {
           <div className="about-image">
             <img
               className={`img-main ${show ? "show" : ""}`}
-              src="/images/About/about3.jpg"
+              src="/images/About/about3.png"
               alt="Doctor"
               onLoad={() => setShow(true)}
               style={{ objectPosition: 'top' }}

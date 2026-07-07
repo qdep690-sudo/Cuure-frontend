@@ -14,7 +14,7 @@ const doctors = [
     clinic: "Mysore",
     rating: 4.9,
     reviews: 312,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&auto=format&fit=crop",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.8,
     reviews: 278,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&auto=format&fit=crop",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.9,
     reviews: 195,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=400&auto=format&fit=crop",
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.7,
     reviews: 428,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&auto=format&fit=crop",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const doctors = [
     clinic: "Mysore",
     rating: 4.8,
     reviews: 210,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&auto=format&fit=crop",
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const doctors = [
     clinic: "Mysore",
     rating: 4.9,
     reviews: 210,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&auto=format&fit=crop",
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.7,
     reviews: 423,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&auto=format&fit=crop",
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.7,
     reviews: 425,
-    image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+    image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?w=400&auto=format&fit=crop",
   },
 ];
 
@@ -134,8 +134,8 @@ function ListCard({ doc }) {
         </div>
         <div className={styles.listRight}>
           <div className={styles.listName}>{doc.name}</div>
-          <div className={styles.listDegree}>{doc.degree}, {doc.experience}</div>
-          <div className={styles.listKmc}>KMC : {doc.kmc}</div>
+          <div className={styles.listDegree}>{doc.degree}</div>
+          {/* <div className={styles.listKmc}>KMC : {doc.kmc}</div> */}
           <div className={styles.listClinic}>{doc.clinic}</div>
           <div className={styles.listAvailRow}>
             <div />
