@@ -7,16 +7,16 @@ export default function Plans() {
       {/* HERO */}
     <div className={styles.hero}>
   <div className="container">
-    <div className={styles.pill}>PRICING PLANS</div>
+    {/* <div className={styles.pill}>PRICING PLANS</div> */}
 
     <h1>
       Choose <span>Your Plan</span>
     </h1>
 
-    <p>
+    {/* <p>
       Flexible subscription plans designed to give you and your family
       the best healthcare support anytime, anywhere.
-    </p>
+    </p> */}
   </div>
 </div>
 

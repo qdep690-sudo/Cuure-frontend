@@ -359,7 +359,7 @@ export default function Services() {
       {/* ── Blue Hero ── */}
       <div className={styles.pageHero}>
         <div className={styles.pageHeroInner}>
-          <span className={styles.pageHeroPill}>What We Offer</span>
+          {/* <span className={styles.pageHeroPill}>What We Offer</span> */}
           <h1 className={styles.pageHeroTitle}>
             Our <span className={styles.pageHeroFade}>Services</span>
           </h1>

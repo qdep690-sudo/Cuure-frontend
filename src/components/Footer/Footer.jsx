@@ -96,16 +96,16 @@ export default function Footer() {
           <div className={styles.col}>
             <h4>Stay Updated</h4>
             <p className={styles.newsDesc}>Get health tips and updates in your inbox.</p>
-            <div className={styles.newsletter}>
+            {/* <div className={styles.newsletter}>
               <input type="email" placeholder="Your email" />
               <button>→</button>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className={styles.bottom}>
           <p>© 2026 cuure.health. All rights reserved.</p>
-          <p>Made with ❤️ for better healthcare</p>
+          <p>Made by LINQWAY TECKNIKS PVT LTD</p>
         </div>
       </div>
     </footer>

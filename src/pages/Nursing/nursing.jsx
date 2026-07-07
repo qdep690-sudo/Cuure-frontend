@@ -93,12 +93,12 @@ export default function Nursing() {
 
       <div className={styles.hero}>
         <div className={styles.heroInner}>
-          <div className={styles.heroPill}>NURSING CARE</div>
+          {/* <div className={styles.heroPill}>NURSING CARE</div> */}
           <h1 className={styles.heroTitle}>
             Compassionate Care By <span className={styles.heroFade}>Expert Nurses</span>
           </h1>
           <p className={styles.heroDesc}>
-            Our certified nurses provide round-the-clock professional care at your home
+            {/* Our certified nurses provide round-the-clock professional care at your home */}
             {/* home or clinic — from post-surgery recovery to chronic illness management. */}
           </p>
         </div>

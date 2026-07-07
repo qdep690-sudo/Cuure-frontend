@@ -9,7 +9,7 @@
 /* ── HERO ── */
 .hero {
   background: linear-gradient(135deg, #0f1f3d 0%, #1a3260 60%, #0d2147 100%);
-  padding: 30px 6%;
+  padding: 75px 6% 20px;
   position: relative;
   overflow: hidden;
 }

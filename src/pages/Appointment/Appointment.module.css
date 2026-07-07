@@ -1,5 +1,5 @@
 .page {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 .hero {
@@ -55,13 +55,24 @@
   position: relative;
 }
 
+/* ---------- UPDATED LAYOUT ---------- */
+
 .layout {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 40px;
-  padding: 56px 0 80px;
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 56px 20px 80px;
 }
+
+/* Form Container */
+.formCard,
+.appointmentCard,
+.formWrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ---------- INFO CARDS ---------- */
 
 .info {
   display: flex;
@@ -95,14 +106,23 @@
   line-height: 1.6;
 }
 
+/* ---------- RESPONSIVE ---------- */
+
 @media (max-width: 900px) {
   .layout {
-    grid-template-columns: 1fr;
+    padding: 40px 16px 60px;
+  }
+
+  .formCard,
+  .appointmentCard,
+  .formWrapper {
+    max-width: 100%;
   }
 
   .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 }
 

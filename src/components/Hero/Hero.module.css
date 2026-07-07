@@ -57,7 +57,7 @@
 .badgeDot {
   width: 8px;
   height: 8px;
-  background: var(--accent);
+  background: #22c55e;
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
 }

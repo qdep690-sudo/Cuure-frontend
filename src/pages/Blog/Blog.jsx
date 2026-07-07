@@ -10,11 +10,11 @@ export default function Blog() {
     { title: "Virtual Doctor Consultations: Benefits, Process & When to Use Them",       slug: "virtual-consultations", image: "/images/BlogImages/Blog3.jpg" },
     { title: "How to Improve Gut Health Naturally: Diet, Symptoms & Tips",                 slug: "nutrition-gut-health",  image: "/images/BlogImages/Blog4.jpg" },
     { title: "Cancer Prevention: Symptoms, Risk Factors & Early Detection",  slug: "cancer-awareness",      image: "/images/BlogImages/Blog5.jpg" },
-    { title: "High Blood Pressure: Symptoms, Causes & Prevention", slug: "high-blood-pressure", image: "/images/BlogImages/Blog6.jpg" },
-  { title: "Diabetes: Symptoms, Causes & Blood Sugar Management", slug: "diabetes-management", image: "/images/BlogImages/Blog7.jpg" },
-  { title: "Mental Health: Signs, Symptoms & When to Seek Help", slug: "mental-health", image: "/images/BlogImages/Blog8.jpg" },
-  { title: "Women's Health: Essential Screenings & Preventive Care", slug: "womens-health", image: "/images/BlogImages/Blog9.jpg" },
-  { title: "Joint Pain: Causes, Prevention & When to See an Orthopedic Doctor", slug: "joint-pain", image: "/images/BlogImages/Blog10.jpg" },
+    { title: "High Blood Pressure: Symptoms, Causes & Prevention", slug: "high-blood-pressure", image: "/images/BlogImages/Blog6.png" },
+  { title: "Diabetes: Symptoms, Causes & Blood Sugar Management", slug: "diabetes-management", image: "/images/BlogImages/Blog10.png" },
+  { title: "Mental Health: Signs, Symptoms & When to Seek Help", slug: "mental-health", image: "/images/BlogImages/Blog9.png" },
+  { title: "Women's Health: Essential Screenings & Preventive Care", slug: "womens-health", image: "/images/BlogImages/Blog8.png" },
+  { title: "Joint Pain: Causes, Prevention & When to See an Orthopedic Doctor", slug: "joint-pain", image: "/images/BlogImages/Blog7.png" },
   ];
 
   return (
@@ -25,9 +25,9 @@ export default function Blog() {
           <h1 className="blog-hero__title">
             Health <span>Blog</span>
           </h1>
-          <p className="blog-hero__subtitle">
+          {/* <p className="blog-hero__subtitle">
             Expert articles, tips, and guides from our team of doctors.
-          </p>
+          </p> */}
         </div>
       </div>
 

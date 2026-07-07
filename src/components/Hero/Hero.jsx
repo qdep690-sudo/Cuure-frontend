@@ -74,7 +74,7 @@ export default function Hero() {
         <div className={styles.content}>
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            Trusted Home Nursing Services in Mysore
+            Trusted Doctors for Every Family
           </div>
 
           {/* Rotating Title */}

@@ -10,8 +10,8 @@ export default function Contact() {
       icon: <MdLocationOn size={24} color="#1e3a8a" />,
       title: 'Visit Us',
       lines: [
-        { text: '1054, Sarvajanika Hostel Rd, Vidyaranyapura', href: 'https://maps.google.com/?q=1054+Sarvajanika+Hostel+Rd+Vidyaranyapura+Mysuru' },
-        { text: 'Mysuru, Karnataka 570008', href: null },
+        { text: '1808, MH Road, Mandi Mohalla', href: 'https://maps.app.goo.gl/UZucHfeL2yfNF6MeA' },
+        { text: 'Mysuru, Karnataka 570021', href: null },
       ]
     },
     {
