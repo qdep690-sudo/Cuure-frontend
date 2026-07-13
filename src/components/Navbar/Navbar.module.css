@@ -187,6 +187,36 @@
 .dropdownItem:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+.btnEmergency {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #dc2626;
+  color: #fff;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btnEmergency:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.btnEmergency svg {
+  font-size: 18px;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {

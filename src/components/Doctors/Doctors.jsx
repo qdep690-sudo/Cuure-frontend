@@ -14,7 +14,7 @@ const doctors = [
     clinic: "Mysore",
     rating: 4.9,
     reviews: 312,
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&auto=format&fit=crop",
+     image: "/images/doctor/doctor3.webp",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.8,
     reviews: 278,
-    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&auto=format&fit=crop",
+    image: "/images/doctor/doctor4.webp",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.9,
     reviews: 195,
-    image: "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=400&auto=format&fit=crop",
+    image: "/images/doctor/doctor5.webp",
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.7,
     reviews: 428,
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&auto=format&fit=crop",
+    image: "/images/doctor/doctor6.webp",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const doctors = [
     clinic: "Mysore",
     rating: 4.8,
     reviews: 210,
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&auto=format&fit=crop",
+    image: "/images/doctor/doctor1.webp",
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const doctors = [
     clinic: "Mysore",
     rating: 4.9,
     reviews: 210,
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&auto=format&fit=crop",
+    image: "/images/doctor/doctor2.webp",
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.7,
     reviews: 423,
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&auto=format&fit=crop",
+    image: "/images/doctor/doctor7.webp",
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ const doctors = [
     clinic: " Mysore",
     rating: 4.7,
     reviews: 425,
-    image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?w=400&auto=format&fit=crop",
+    image: "/images/doctor/doctor8.webp",
   },
 ];
 

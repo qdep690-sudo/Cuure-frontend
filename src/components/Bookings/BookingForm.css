@@ -181,6 +181,153 @@ html, body, #root {
   font-size: 14px;
   color: #64748b;
 }
+/* ==========================
+   Success Modal
+========================== */
+
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+  animation: fadeIn .3s ease;
+}
+
+.success-card {
+
+  width: 430px;
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 45px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+
+  animation: popup .35s ease;
+}
+
+.success-icon {
+
+  width: 90px;
+  height: 90px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 46px;
+  font-weight: bold;
+
+  animation: tick .5s ease;
+}
+
+.success-card h2 {
+
+  margin-top: 22px;
+
+  font-size: 30px;
+
+  color: #0f172a;
+}
+
+.success-card p {
+
+  margin-top: 14px;
+
+  color: #64748b;
+
+  line-height: 1.7;
+}
+
+.success-btn {
+
+  margin-top: 30px;
+
+  padding: 14px 40px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: #183c7a;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.success-btn:hover {
+
+  background: #0f2f63;
+
+  transform: translateY(-2px);
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+
+  from { opacity:0; }
+
+  to { opacity:1; }
+}
+
+@keyframes popup {
+
+  from {
+
+    opacity:0;
+
+    transform: scale(.8);
+  }
+
+  to {
+
+    opacity:1;
+
+    transform: scale(1);
+  }
+}
+
+@keyframes tick {
+
+  0% {
+
+    transform: scale(0);
+  }
+
+  70% {
+
+    transform: scale(1.15);
+  }
+
+  100% {
+
+    transform: scale(1);
+  }
+}
 
 /* 📱 MOBILE */
 @media (max-width: 900px) {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import styles from './Navbar.module.css'
+import { MdCall } from "react-icons/md";
 
 const navLinks = [
   { label: 'About', to: '/about' },
@@ -73,6 +74,10 @@ export default function Navbar() {
         </nav>
 
         <div className={styles.cta}>
+           <a href="tel:+917483068353" className={styles.btnEmergency}>
+    <MdCall />
+    <span>Emergency</span>
+  </a>
           <Link to="/appointment" className={styles.btnBook}>
             Book Appointment
           </Link>

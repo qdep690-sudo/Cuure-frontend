@@ -20,7 +20,7 @@ export default function Contact() {
       lines: [
         { text: '+91 74830 68353', href: 'tel:+917483068353' },
         { text: '82131 56014', href: 'tel:8213156014' },
-        { text: 'Available 24/7 for emergency calls', href: null },
+        // { text: 'Available 24/7 for emergency calls', href: null },
       ]
     },
     {
@@ -35,8 +35,8 @@ export default function Contact() {
       icon: <MdAccessTime size={24} color="#1e3a8a" />,
       title: 'Working Hours',
       lines: [
-        { text: 'Weekdays: 24/7', href: null },
-        { text: 'Weekends: 24/7', href: null },
+        { text: '24/7', href: null },
+        // { text: 'Weekends: 24/7', href: null },
       ]
     },
   ]
@@ -46,15 +46,15 @@ export default function Contact() {
   <div className={styles.sectionBreak}></div>
   <section className={styles.contactHero}>
     <div className={styles.heroContainer}>
-      <div className={styles.contactPill}>GET IN TOUCH</div>
+      <div className={styles.contactPill}>FAQs</div>
 
       <h2 className={styles.contactTitle}>
-        Contact <span>Us</span>
+        Frequently asked <br></br><span>Questions</span>
       </h2>
 
-      <p className={styles.subtitle}>
+      {/* <p className={styles.subtitle}>
         Have questions? We'd love to hear from you...
-      </p>
+      </p> */}
     </div>
   </section>
 
@@ -63,7 +63,7 @@ export default function Contact() {
         <div className={styles.layout}>
 
           {/* FORM */}
-          <div className={styles.formSection}>
+          {/* <div className={styles.formSection}>
             {sent ? (
               <div className={styles.success}>
                 <div>✅</div>
@@ -108,7 +108,57 @@ export default function Contact() {
                 </button>
               </form>
             )}
-          </div>
+          </div> */}
+          <div className={styles.faq}>
+  {/* <h2>Frequently Asked Questions</h2> */}
+
+  <details className={styles.faqItem} >
+    <summary>How do I book an appointment?</summary>
+    <p>
+      You can book an appointment through our website, call us directly, or
+      contact us via WhatsApp.
+    </p>
+  </details>
+
+  <details className={styles.faqItem}>
+    <summary>Do you provide home healthcare services?</summary>
+    <p>
+      Yes. We provide doctor home visits, nursing care, physiotherapy, home
+      ICU setup, elderly care, and lab sample collection.
+    </p>
+  </details>
+
+  <details className={styles.faqItem}>
+    <summary>Can I consult a doctor online?</summary>
+    <p>
+      Yes. Online consultations are available with our experienced doctors.
+    </p>
+  </details>
+
+  <details className={styles.faqItem}>
+    <summary>What are your working hours?</summary>
+    <p>
+      We are available 24/7 to assist you with healthcare services and
+      emergency support.
+    </p>
+  </details>
+
+  <details className={styles.faqItem}>
+    <summary>Which areas do you serve?</summary>
+    <p>
+      We currently provide healthcare services across Mysuru and nearby
+      locations.
+    </p>
+  </details>
+
+  <details className={styles.faqItem}>
+    <summary>How can I contact Cuure Health?</summary>
+    <p>
+      You can reach us via phone, email, or WhatsApp. Our team is always happy
+      to help.
+    </p>
+  </details>
+</div>
 
           {/* CONTACT CARDS */}
           <div className={styles.contacts}>

@@ -47,11 +47,11 @@ export default function Features() {
               </div>
               <h3 className={styles.cardTitle}>{f.title}</h3>
               <p className={styles.cardDesc}>{f.desc}</p>
-              <div className={styles.cardArrow}>
+              {/* <div className={styles.cardArrow}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

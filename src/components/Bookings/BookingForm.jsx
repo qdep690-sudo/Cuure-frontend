@@ -14,7 +14,7 @@ export default function Booking() {
 });
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
 
   // const calculateAge = (dob) => {
@@ -62,7 +62,7 @@ export default function Booking() {
       return;
     }
 
-    setSuccess(false);
+    setShowSuccess(false);
     setLoading(true);
 
     try {
@@ -76,7 +76,7 @@ export default function Booking() {
 });
 
       // ✅ INSTANT SUCCESS (no delay)
-      setSuccess(true);
+      setShowSuccess(true);
       setLoading(false);
 
       // ✅ CLEAR FORM
@@ -133,11 +133,11 @@ export default function Booking() {
             </p>
 
             {/* ✅ SUCCESS MESSAGE */}
-            {success && (
+            {/* {success && (
               <p style={{ color: "green", fontWeight: "bold" }}>
                 ✅ Appointment Booked Successfully!
               </p>
-            )}
+            )} */}
 
             <form onSubmit={handleSubmit}>
               <div className="appt-grid">
@@ -212,10 +212,39 @@ export default function Booking() {
               </div>
 
               <button type="submit" className="appt-submit" disabled={loading}>
-                {loading ? "Processing..." : success ? "Booked ✅" : "Confirm Appointment →"}
+                {loading ? "Processing..." : "Confirm Appointment →"}
               </button>
 
             </form>
+            {showSuccess && (
+  <div className="success-overlay">
+    <div className="success-card">
+
+      <div className="success-icon">
+        ✓
+      </div>
+
+      <h2>Appointment Confirmed</h2>
+
+      <p>
+        Thank you for choosing <strong>Cuure Health</strong>.
+      </p>
+
+      <p>
+        Our coordinator will contact you within
+        <strong> 15 minutes</strong> to confirm your appointment.
+      </p>
+
+      <button
+        className="success-btn"
+        onClick={() => setShowSuccess(false)}
+      >
+        Close
+      </button>
+
+    </div>
+  </div>
+)}
           </div>
 
         </div>
