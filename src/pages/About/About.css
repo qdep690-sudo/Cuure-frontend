@@ -1,20 +1,168 @@
-/* ── Sections ── */
+/* ============================================================
+   About page — built on the existing global tokens (index.css):
+   --primary, --dark, --accent, --surface, --border, --shadow-*,
+   --radius-*, --font-body, --transition. No new colors introduced.
+   ============================================================ */
+
+.about-page {
+  padding-top: 3rem;
+  overflow-x: hidden;
+}
+
+/* ── Shared type helpers ── */
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.eyebrow--on-dark {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.section-heading--center {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.section-heading--center .section-title {
+  margin-bottom: 0;
+}
+
+.about-copy {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.hero-secondary {
+  color: rgba(255, 255, 255, 0.35);
+  /* Adjust between 0.3–0.5 to match the Services page exactly */
+}
+
+/* ── Scroll reveal (generic) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .img-main, .animate-fadeUp, .animate-float {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Hero ── */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 22px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+  color: var(--white);
+}
+
+.about-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+.about-hero-glow--one {
+  width: 380px;
+  height: 380px;
+  background: var(--accent);
+  top: -140px;
+  right: -80px;
+}
+.about-hero-glow--two {
+  width: 260px;
+  height: 260px;
+  background: var(--accent-warm);
+  bottom: -120px;
+  left: -60px;
+  opacity: 0.2;
+  animation-delay: 1.2s;
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(38px, 5.4vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin-bottom: 22px;
+  max-width: 650px;
+}
+
+.about-hero-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.trust-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.trust-chip {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
+}
+
+/* ── Story sections (text + image) ── */
 .about-section {
   display: flex;
   align-items: center;
   gap: 5rem;
-  padding: 40px 20px;
+  padding: 72px 20px;
   max-width: 1300px;
   margin: 0 auto;
 }
+.about-section--reverse {
+  flex-direction: row-reverse;
+}
 
-/* ── Text ── */
 .about-text {
   flex: 1.2;
   min-width: 0;
 }
 
-/* ── Image ── */
 .about-image {
   flex: 0.8;
   position: relative;
@@ -22,20 +170,19 @@
   max-width: 55%;
   flex-shrink: 0;
 }
-
 .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
-/* ── Image animation ── */
 .img-main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -45,43 +192,216 @@
   transform: translateY(0);
 }
 
+/* ── How it works ── */
+.process-section {
+  background: var(--surface);
+  padding: 84px 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.process-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px 24px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.process-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.process-number {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--primary-pale);
+  -webkit-text-stroke: 1.5px var(--primary-light);
+  margin-bottom: 18px;
+}
+
+.process-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.process-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Mission value cards ── */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.value-card {
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  border: 1px solid transparent;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.value-card:hover {
+  border-color: var(--border);
+  transform: translateY(-3px);
+}
+
+.value-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.value-text {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Vision list ── */
+.vision-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vision-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.vision-item:first-child {
+  padding-top: 0;
+}
+.vision-item:last-child {
+  border-bottom: none;
+}
+
+.vision-mark {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 3px;
+  background: var(--accent-warm);
+}
+
+/* ── Buttons ──
+   No shared Button component was available to reuse — this follows
+   the token system (radius/shadow/transition) so it can be lifted
+   into a shared <Button /> later without visual changes. */
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 34px;
+  border-radius: var(--radius-sm);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.btn-cta {
+  background: var(--accent-warm);
+  color: var(--dark);
+  box-shadow: var(--shadow-md);
+}
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── CTA band ── */
+.about-cta {
+  background: linear-gradient(135deg, var(--dark-2) 0%, var(--dark) 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+.about-cta-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.about-cta-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3.6vw, 38px);
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.about-cta-subtitle {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
 /* ── Tablet ── */
 @media (max-width: 1024px) {
   .about-section {
     gap: 2rem;
-    padding: 30px 20px;
+    padding: 56px 20px;
   }
-
   .about-image {
     height: 320px;
+  }
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .value-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
-  .about-section {
+  .about-hero {
+    padding: 64px 0 48px;
+  }
+  .about-section,
+  .about-section--reverse {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 20px 16px;
+    padding: 40px 16px;
   }
-
   .about-image {
-    order: -1;        /* ← always puts image first on mobile */
+    order: -1;
     max-width: 100%;
     width: 100%;
     height: 260px;
     flex-shrink: unset;
   }
-
   .about-text {
     width: 100%;
   }
-
-  .about-text p {
-    font-size: 18px !important;
+  .about-copy {
+    font-size: 17px;
   }
-
-  .about-text ul {
-    font-size: 16px !important;
+  .process-section {
+    padding: 56px 0;
+  }
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-heading--center {
+    margin-bottom: 36px;
   }
 }

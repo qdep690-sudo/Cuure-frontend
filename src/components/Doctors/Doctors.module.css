@@ -260,21 +260,22 @@
 }
 
 .listPhoto {
-  width: 130px;
-  height: 140px;
-  border-radius: 12px;
-  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   overflow: hidden;
-  background: #eee;
+  background: #dde5f5;
+  flex-shrink: 0;
 }
+
 .listPhoto img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  object-position: top;
   display: block;
-  background: #e8eef8;
-  padding: 10px;
+  padding: 0;
+  background: transparent;
 }
 
 .listRight {
