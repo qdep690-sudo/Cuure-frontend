@@ -18,6 +18,7 @@ const BlogDetail = lazy(() => import('./components/Blog/BlogDetail'))
 
 import ScrollTop from './ScrollTop'
 import WhatsApp from './WhatsApp'
+import ChatWidget from './components/ChatWidget/ChatWidget'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -56,6 +57,7 @@ export default function App() {
         </Routes>
       </Suspense>
 
+      <ChatWidget />
       <ScrollTop />
       <WhatsApp />
       <Footer />

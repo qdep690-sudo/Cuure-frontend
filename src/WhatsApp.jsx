@@ -9,23 +9,9 @@ export default function WhatsApp() {
 
   return (
     <button
+      className="whatsapp-float"
       onClick={handleClick}
-      style={{
-        position: "fixed",
-        bottom: "90px",
-        right: "20px",
-        width: "55px",
-        height: "55px",
-        borderRadius: "50%",
-        backgroundColor: "#25D366",
-        border: "none",
-        cursor: "pointer",
-        boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 999,
-      }}
+      aria-label="Contact us on WhatsApp"
     >
       <FaWhatsapp size={28} color="white" />
     </button>

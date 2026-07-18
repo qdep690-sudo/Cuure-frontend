@@ -23,7 +23,6 @@
   --font-display: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 *, *::before, *::after {
@@ -41,7 +40,10 @@ body {
   background: var(--white);
   color: var(--text);
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -78,88 +80,97 @@ button {
   from { opacity: 0; transform: translateY(32px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
-
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
 }
-
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-.animate-fadeUp {
-  animation: fadeUp 0.7s ease forwards;
-}
+.animate-fadeUp { animation: fadeUp 0.7s ease forwards; }
+.animate-float  { animation: float 4s ease-in-out infinite; }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
+/* ── Floating Action Buttons ─────────────────────────────────────────
+   Desktop stack (right: 24px, bottom-up):
+     scroll-top   bottom: 24px   (top edge: 80px)
+     whatsapp     bottom: 92px   (top edge: 148px)   ← 12px gap
+   Chat trigger   bottom: 24px   → it overlaps these when chat is open (OK)
+───────────────────────────────────────────────────────────────────── */
+
+/* WhatsApp */
 .whatsapp-float {
   position: fixed;
-  bottom: 100px;   /* higher */
-  right: 25px;
-  width: 60px;
-  height: 60px;
+  bottom: 92px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
   background: #25D366;
   color: white;
   border-radius: 50%;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  z-index: 999;
+  cursor: pointer;
+  z-index: 99998;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .whatsapp-float:hover {
   transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
+/* Scroll to top */
 .scroll-top {
   position: fixed;
-  bottom: 25px;   /* lower */
-  right: 25px;
-  width: 50px;
-  height: 50px;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: #001f5b;
   color: white;
   border: none;
   font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  z-index: 999;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 99998;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.scroll-top:hover { transform: translateX(-50%) scale(1.1); }
 
-.scroll-top:hover {
-  transform: scale(1.1);
-}
-html {
-  scroll-behavior: smooth;
-}
-:root {
-  --font-body: 'Inter', sans-serif;
-}
-
-body {
-  font-family: var(--font-body);
-}
-* {
-  font-family: 'Inter', sans-serif !important;
+/* ── Mobile overrides (MUST be after base styles) ────────────────── */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 80px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+  .scroll-top {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+  }
 }
