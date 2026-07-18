@@ -16,7 +16,7 @@ import './ChatWidget.css';
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   // Sessions state
   const [sessions, setSessions] = useState([]);
@@ -61,7 +61,6 @@ const ChatWidget = () => {
     }
   }, []);
 
-  // ── Session Management ────────────────────────────────────────────
   const handleNewChat = () => {
     const welcome = { sender: 'assistant', text: 'Hi! I am Cuure AI. How can I help you today?', timestamp: new Date().toISOString() };
     const session = createConversation(null);
@@ -73,6 +72,7 @@ const ChatWidget = () => {
     setCurrentOptions(null);
     setShowBookingPrompt(false);
     setMode('chat');
+    if (window.innerWidth <= 768) setShowSidebar(false);
   };
 
   const handleSelectSession = (sessionId) => {
@@ -85,6 +85,7 @@ const ChatWidget = () => {
     setCurrentOptions(null);
     setShowBookingPrompt(false);
     setMode('chat');
+    if (window.innerWidth <= 768) setShowSidebar(false);
   };
 
   const handleDeleteSession = (sessionId) => {
@@ -234,6 +235,7 @@ const ChatWidget = () => {
               onNewChat={handleNewChat}
               onDeleteSession={handleDeleteSession}
               onRenameSession={handleRenameSession}
+              onClose={() => setShowSidebar(false)}
             />
           )}
 

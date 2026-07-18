@@ -3,7 +3,7 @@ import { Plus, Search, X } from 'lucide-react';
 import ChatHistoryItem from './ChatHistoryItem';
 import { groupConversations, searchConversations } from '../../utils/storageHelper';
 
-const ChatSidebar = ({ sessions, activeSessionId, onSelectSession, onNewChat, onDeleteSession, onRenameSession }) => {
+const ChatSidebar = ({ sessions, activeSessionId, onSelectSession, onNewChat, onDeleteSession, onRenameSession, onClose }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredSessions = useMemo(() => {
@@ -36,9 +36,14 @@ const ChatSidebar = ({ sessions, activeSessionId, onSelectSession, onNewChat, on
     <div className="chat-sidebar">
       <div className="sidebar-header">
         <span className="sidebar-logo">Cuure AI</span>
-        <button className="new-chat-btn" onClick={onNewChat} title="New Chat">
-          <Plus size={16} /> New Chat
-        </button>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <button className="new-chat-btn" onClick={onNewChat} title="New Chat">
+            <Plus size={16} /> New Chat
+          </button>
+          <button className="mobile-sidebar-close" onClick={onClose} title="Close Sidebar">
+            <X size={20} />
+          </button>
+        </div>
       </div>
 
       <div className="sidebar-search-wrap">

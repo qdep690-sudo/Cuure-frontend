@@ -5,42 +5,59 @@
 
 .chat-widget-container {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  z-index: 100000;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  pointer-events: none;
+}
+.chat-widget-container > * {
+  pointer-events: all;
 }
 
-/* ── Trigger Button ─────────────────────────── */
+/* ── Trigger Button — anchored bottom-right ──────────────────────── */
 .chat-trigger-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  box-sizing: border-box;
-  position: fixed;
-  bottom: 175px;
-  right: 25px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 10px 25px rgba(118, 75, 162, 0.45);
   cursor: pointer;
+  z-index: 100000;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
+
 .chat-trigger-btn:hover {
   transform: scale(1.12) rotate(5deg);
   box-shadow: 0 16px 36px rgba(118, 75, 162, 0.55);
 }
 
-/* ── Chat Window ────────────────────────────── */
+@media (max-width: 768px) {
+  .chat-trigger-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* ── Chat Window — compact card above trigger ───────────────────── */
 .chat-window {
-  width: 780px;
+  position: fixed;
+  bottom: 92px;    /* trigger(24) + trigger-height(56) + gap(12) */
+  right: 24px;
+  width: 380px;
+  height: 520px;
   max-width: calc(100vw - 48px);
-  max-height: 680px;
-  height: 85vh;
+  max-height: calc(100vh - 120px);
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 24px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
@@ -48,22 +65,22 @@
   flex-direction: row;
   overflow: hidden;
   animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
+  transition: width 0.3s ease;
+}
+
+.chat-window:has(.chat-sidebar) {
+  width: 620px;
 }
 
 @media (max-width: 768px) {
   .chat-window {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 0;
-    z-index: 10000;
+    right: 16px;
+    bottom: 80px;  /* trigger(16) + trigger-height(52) + gap(12) */
+    width: calc(100vw - 32px);
+    height: 70vh;
+    max-height: 520px;
+    max-width: 400px;
+    border-radius: 16px;
   }
 }
 
@@ -82,6 +99,37 @@
   border-right: 1px solid rgba(255,255,255,0.08);
   overflow: hidden;
   transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .chat-sidebar {
+    width: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+  }
+}
+
+.mobile-sidebar-close {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+.mobile-sidebar-close:hover { background: rgba(255,255,255,0.1); }
+
+@media (max-width: 768px) {
+  .mobile-sidebar-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .sidebar-header {
