@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./BookingForm.css";
 
-const API = "https://cuure-backend-production-bba5.up.railway.app";
+const API = "http://localhost:5000";
 
 export default function Booking() {
  const [form, setForm] = useState({
@@ -98,10 +98,19 @@ export default function Booking() {
 });
 
     } catch (err) {
-      setLoading(false);
-      alert("❌ Booking Failed");
-      console.error(err);
-    }
+  setLoading(false);
+
+  console.error("FULL ERROR:", err);
+
+  if (err.response) {
+    console.log("Status:", err.response.status);
+    console.log("Response:", err.response.data);
+    alert(JSON.stringify(err.response.data, null, 2));
+  } else {
+    console.log("Message:", err.message);
+    alert(err.message);
+  }
+}
   };
 
   useEffect(() => {
