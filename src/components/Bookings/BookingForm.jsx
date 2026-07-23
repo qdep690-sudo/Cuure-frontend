@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./BookingForm.css";
 
-const API = "http://localhost:5000";
+const API = import.meta.env.VITE_API_BASE_URL;
 
 export default function Booking() {
  const [form, setForm] = useState({
