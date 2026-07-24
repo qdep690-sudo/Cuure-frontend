@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./BookingForm.css";
 
 const API = import.meta.env.VITE_API_BASE_URL;
 
 export default function Booking() {
+ const navigate = useNavigate();
  const [form, setForm] = useState({
   patient_name: "",
   email: "",
@@ -245,11 +247,14 @@ export default function Booking() {
       </p>
 
       <button
-        className="success-btn"
-        onClick={() => setShowSuccess(false)}
-      >
-        Close
-      </button>
+  className="success-btn"
+  onClick={() => {
+    setShowSuccess(false);
+    navigate("/");
+  }}
+>
+  Close
+</button>
 
     </div>
   </div>
