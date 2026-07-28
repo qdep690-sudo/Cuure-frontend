@@ -15,6 +15,7 @@ const Blog = lazy(() => import('./pages/Blog/Blog'))
 const Plans = lazy(() => import('./pages/Plans/Plans'))
 const Nursing = lazy(() => import('./pages/Nursing/nursing'))
 const BlogDetail = lazy(() => import('./components/Blog/BlogDetail'))
+const Insurance = lazy(() => import('./pages/Insurance/Insurance'))
 
 import ScrollTop from './ScrollTop'
 import WhatsApp from './WhatsApp'
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/plans" element={<Plans />} />
           <Route path="/nursing" element={<Nursing />} />
+          <Route path="/insurance" element={<Insurance />} />
         </Routes>
       </Suspense>
 

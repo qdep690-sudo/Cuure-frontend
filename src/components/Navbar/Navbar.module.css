@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 20px;
 }
 
 .logo {
@@ -56,18 +56,21 @@
 .links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .link {
   font-size: 15px;
   font-weight: 500;
   color: var(--text);
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: 100px;
   transition: all var(--transition);
   position: relative;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .link:hover {
@@ -83,7 +86,7 @@
 .cta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 2px;
   flex-shrink: 0;
 }
 
@@ -97,6 +100,7 @@
   transition: all var(--transition);
   font-family: var(--font-body);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .btnBook:hover {
@@ -195,11 +199,12 @@
   background: #dc2626;
   color: #fff;
 
-  padding: 12px 22px;
+  padding: 8px 22px;
   border-radius: 999px;
 
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 
   transition: all 0.3s ease;
 }
@@ -212,10 +217,25 @@
 .btnEmergency svg {
   font-size: 18px;
 }
-.cta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+
+/* ── MID-WIDTH: tighten spacing so 7 links + both CTAs fit
+   before the burger menu kicks in at 900px ── */
+@media (max-width: 1280px) {
+  .nav {
+    gap: 12px;
+  }
+  .link {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .btnEmergency {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  .btnBook {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
 }
 
 /* ── RESPONSIVE ── */
