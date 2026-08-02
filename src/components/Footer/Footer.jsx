@@ -5,6 +5,7 @@ import { FaWhatsapp, FaInstagram, FaYoutube } from "react-icons/fa";
 const links = {
   Company: ['About Us', 'Our Doctors', 'Why Choose Us', 'Plans'],
   Services: ['Doctor Consultation', 'Physiotherapy', 'Elderly Care', 'Pharmacy', 'Nursing', 'Diagnostics'],
+  Insurance: ['Health Insurance', 'Coverage Plans', 'Claim Support', 'Partner Providers'],
   Support: ['Help Center', 'Book Appointment', 'FAQs'],
 }
 
@@ -73,6 +74,10 @@ export default function Footer() {
     "Pharmacy": "/services",
     "Nursing": "/services",
     "Diagnostics": "/services",
+    "Health Insurance": "/insurance",
+    "Coverage Plans": "/insurance",
+    "Claim Support": "/contact",
+    "Partner Providers": "/insurance",
     "Help Center": "/contact",
     "Book Appointment": "/appointment",
     "FAQs": "/contact"
