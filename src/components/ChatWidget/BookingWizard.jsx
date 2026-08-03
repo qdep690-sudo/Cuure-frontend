@@ -31,6 +31,18 @@ const BookingWizard = ({ preFilledReason, onBookingComplete }) => {
   const handleSubmit = async () => {
     setError(null);
 
+    // Rate Limiting Logic
+    const limit = parseInt(import.meta.env.VITE_MAX_BOOKINGS_PER_MINUTE || "3", 10);
+    const now = Date.now();
+    let bookingAttempts = JSON.parse(localStorage.getItem('booking_attempts') || '[]');
+    // Keep only attempts from the last 60 seconds
+    bookingAttempts = bookingAttempts.filter(timestamp => now - timestamp < 60000);
+
+    if (bookingAttempts.length >= limit) {
+      setError("Booking limit reached. Please try again in a minute.");
+      return;
+    }
+
     // Full Name Validation
     if (!formData.patient_name.trim()) {
       setError("Please enter your full name.");
@@ -48,6 +60,10 @@ const BookingWizard = ({ preFilledReason, onBookingComplete }) => {
       setError("Please select your gender.");
       return;
     }
+
+    // Record the booking attempt
+    bookingAttempts.push(now);
+    localStorage.setItem('booking_attempts', JSON.stringify(bookingAttempts));
 
     setIsSubmitting(true);
 
