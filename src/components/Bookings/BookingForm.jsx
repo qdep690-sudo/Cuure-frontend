@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./BookingForm.css";
 
-const API = "https://cuure-backend-production-bba5.up.railway.app";
+const API = import.meta.env.VITE_API_BASE_URL;
 
 export default function Booking() {
+ const navigate = useNavigate();
  const [form, setForm] = useState({
   patient_name: "",
   email: "",
@@ -98,10 +100,19 @@ export default function Booking() {
 });
 
     } catch (err) {
-      setLoading(false);
-      alert("❌ Booking Failed");
-      console.error(err);
-    }
+  setLoading(false);
+
+  console.error("FULL ERROR:", err);
+
+  if (err.response) {
+    console.log("Status:", err.response.status);
+    console.log("Response:", err.response.data);
+    alert(JSON.stringify(err.response.data, null, 2));
+  } else {
+    console.log("Message:", err.message);
+    alert(err.message);
+  }
+}
   };
 
   useEffect(() => {
@@ -236,11 +247,14 @@ export default function Booking() {
       </p>
 
       <button
-        className="success-btn"
-        onClick={() => setShowSuccess(false)}
-      >
-        Close
-      </button>
+  className="success-btn"
+  onClick={() => {
+    setShowSuccess(false);
+    navigate("/");
+  }}
+>
+  Close
+</button>
 
     </div>
   </div>
