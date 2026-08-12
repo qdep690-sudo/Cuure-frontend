@@ -51,10 +51,13 @@ function HeroTitle() {
 
   return (
     <h1 className={styles.title}>
-  Doctor Consultation &amp; Physiotherapy
+  {/* Advanced */}
+
   <span className={styles.wordContainer}>
-    <span className={styles.highlight}>at Your Home</span>
+    <span className={styles.highlight}>{text}</span>
   </span>
+
+  At Your Home!
 </h1>
   );
 }
